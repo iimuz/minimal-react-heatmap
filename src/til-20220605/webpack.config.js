@@ -16,6 +16,7 @@ module.exports = {
         test: /\.css?$/,
         use: [
           "style-loader",
+          "css-modules-typescript-loader",
           {
             loader: "css-loader",
             options: {
@@ -34,7 +35,7 @@ module.exports = {
     }),
   ],
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json"]
+    extensions: [".ts", ".tsx", ".js", ".json", ".css"]
   },
   target: ["web", "es5"],
 }
